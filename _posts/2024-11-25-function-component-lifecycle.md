@@ -6,7 +6,7 @@
 
 컴포넌트가 생겨나고, 변화하고, 없어지는 일련의 프로세스를 클래스형 컴포넌트로 먼저 이해해보자.
 
-![]({{site.url}}/images/2024-11-25-function-component-lifecycle/image1.png)
+![](/images/2024-11-25-function-component-lifecycle/image1.png)
 
 컴포넌트가 처음 생성될 시 constructor 생성자에 의해 만들어진다.
 후에 클래스형 컴포넌트에 필수가 되는 render 메서드를 통해 웹페이지를 paint한다.
