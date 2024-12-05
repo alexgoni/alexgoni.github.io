@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "리액트 Strict Mode"
+categories: React
+toc: true
 ---
 
 React 개발하면서 골치 아프게 했던 StrictMode.  
