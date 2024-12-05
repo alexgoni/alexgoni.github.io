@@ -3,6 +3,7 @@ layout: single
 title: "리액트 Strict Mode"
 categories: React
 toc: true
+author_profile: false
 ---
 
 React 개발하면서 골치 아프게 했던 StrictMode.  
@@ -107,11 +108,13 @@ export default function StoryTray({ stories }) {
 ```
 
 **StrictMode 해제 시**
+
 위 코드는 li 태그에 마우스를 hover할 경우 state가 변경되면서 리렌더링된다.  
 `const items = stories;` 리렌더링 될 시 items 상수는 사라지더라고 재선언되더라도 같은 주소값을 참조하고 있는 stories props에는 값이 추가된 상태이다.
 이 때문에 마우스를 hover 했을 때 `Encountered two children with the same key` 에러가 발생한다.
 
 **StrictMode 적용 시**
+
 이전에는 마우스를 호버해야 에러를 확인할 수 있었다.  
 하지만 StrictMode는 항상 함수를 두 번 렌더하기 때문에 마우스를 호버하지 않고도 에러를 바로 확인할 수 있다.  
 이는 개발자가 놓칠 수 있는 에러 부분을 명확하게 해준다.

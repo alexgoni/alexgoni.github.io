@@ -3,6 +3,7 @@ layout: single
 title: "함수형 컴포넌트의 라이프사이클"
 categories: React
 toc: true
+author_profile: false
 ---
 
 리액트 라이프사이클에 대해 예제 코드와 함께 이해해보자.
