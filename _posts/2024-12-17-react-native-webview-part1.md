@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "리액트 네이티브 & 웹뷰 Part1"
+title: 리액트 네이티브 & 웹뷰 Part1
 categories: React-Native
+excerpt: 패스트캠퍼스 리액트 네이티브 앱 개발의 모든 것 Part1
 ---
 
 ## 앱의 종류

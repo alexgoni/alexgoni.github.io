@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "조합과 순열"
+title: 조합과 순열
 categories: 자료구조&알고리즘
+excerpt: 조합과 순열을 함수로 구현해보기
 ---
 
 조합: 서로 다른 n개의 물건에서 순서를 생각하지 않고 r개를 택하는 경우, nCr  
