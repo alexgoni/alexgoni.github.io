@@ -2,7 +2,7 @@
 layout: single
 title: 리액트 네이티브 & 웹뷰 Part1
 categories: React-Native
-excerpt: 패스트캠퍼스 리액트 네이티브 앱 개발의 모든 것 Part1
+excerpt: 네이버 앱 클론코딩
 ---
 
 ## 앱의 종류
@@ -108,7 +108,7 @@ excerpt: 패스트캠퍼스 리액트 네이티브 앱 개발의 모든 것 Part
  ┗ 📜_layout.tsx             // 전체 레이아웃
 ```
 
-## Part1 - Project
+## 프로젝트
 
 ### 1. 네비게이션 패턴
 
