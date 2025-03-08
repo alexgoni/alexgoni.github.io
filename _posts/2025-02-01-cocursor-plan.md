@@ -2,6 +2,7 @@
 layout: single
 title: cocursor 기획
 categories: cocursor
+excerpt: 프로젝트를 시작하게 된 계기
 ---
 
 코드잇 스프린트에서 팀의 일정 관리를 도와주는 [Planit](https://planit-xi.vercel.app/)을 개발했었다.
@@ -12,6 +13,7 @@ categories: cocursor
 
 노션의 경우는 글자를 입력할 때마다 `syncRecordValuesSpace`라는 api 명으로 매번 fetch를 하고 있었고,
 ![alt text](/images/2025-02-01-cocursor-plan/image.png)
+
 피그마의 경우는 웹소켓 통신을 통해 Binary Message를 주고 받아 커서의 위치를 실시간으로 업데이트 하고 있었다.
 ![alt text](/images/2025-02-01-cocursor-plan/image2.png)
 
