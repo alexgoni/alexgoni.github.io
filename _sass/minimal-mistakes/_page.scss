@@ -114,7 +114,13 @@ body {
   p,
   li,
   dl {
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+
+  .toc {
+    li {
+      font-size: 1em;
+    }
   }
 
   /* paragraph indents */
