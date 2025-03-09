@@ -119,7 +119,7 @@ SSL/TLS 인증서를 적용하는 방법에는 여러가지 방법이 있지만,
 이후 가비아 DNS에서 해당 주소를 입력했을 때 실질적으로 어디 IP 주소로 이동해야 하는지 알려줘야 한다.  
 이를 레코드 설정이라고 하고, 가비아 DNS 관리툴에서 다음과 같이 설정하였다.
 
-![alt text](/images/2024-02-16-cocursor-server-deploy/image.png)
+![alt text](/images/2025-02-16-cocursor-server-deploy/image.png)
 
 이제 EC2에서 Cerabot으로 Let's Encrypt SSL 인증서를 적용해보자.
 
@@ -181,4 +181,4 @@ server {
 2. 개발자는 프로젝트에 `npm i cocursor`로 모듈을 설치하고, 페이지 컴포넌트 가장 상위에 선언한다.
 3. API Key를 통해 cocursor 서버와 웹소켓 통신을 하고, 이를 통해 사용자들의 커서 정보를 페이지에 표기한다.
 
-![alt text](/images/2024-02-16-cocursor-server-deploy/image2.png)
+![alt text](/images/2025-02-16-cocursor-server-deploy/image2.png)
