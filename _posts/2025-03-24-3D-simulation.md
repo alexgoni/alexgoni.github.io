@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "3D 시뮬레이션 구현 회고"
+title: 3D 시뮬레이션 구현 회고
 categories: 3D
 excerpt: 내가 가진 기술을 활용해 회사 요구사항을 구현하며 배운 점들
 ---
