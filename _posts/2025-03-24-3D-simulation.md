@@ -456,11 +456,7 @@ export function Compass() {
   const compassRotation = useRecoilValue(compassRotationState);
 
   return (
-    <CompassWrapper
-      style={{
-        transform: `rotate(${compassRotation}deg)`,
-      }}
-    >
+    <CompassWrapper>
       <CompassNeedle />
       <CompassLabel>N</CompassLabel>
     </CompassWrapper>
