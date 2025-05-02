@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 3D 시뮬레이션 구현 회고
+title: 3D 건물 시각화 구현 회고
 categories: 3D
 excerpt: 내가 가진 기술을 활용해 회사 요구사항을 구현하며 배운 점들
 ---
 
-한 달여간 맡았던 3D 시뮬레이션 기능이 오늘부로 라이브 배포되었다.  
+한 달여간 맡았던 3D 건물 시각화 기능이 오늘부로 라이브 배포되었다.  
 많은 것을 배우고 의미 있었던 프로젝트였기에 회고를 남겨본다.
 
 ## 1. 요구사항 분석
@@ -51,11 +51,11 @@ excerpt: 내가 가진 기술을 활용해 회사 요구사항을 구현하며 �
 
 <div style="display: flex; gap: 1rem; align-items: flex-start;">
   <figure style="flex: 1; text-align: center;">
-    <img src="/images/2025-03-24-3D-simulation/image2.png" alt="image2" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="/images/2025-03-24-3D-visualization/image2.png" alt="image2" style="width: 100%; height: 300px; object-fit: cover;">
     <figcaption>직사광이 한 개인 경우</figcaption>
   </figure>
   <figure style="flex: 1; text-align: center;">
-    <img src="/images/2025-03-24-3D-simulation/image1.png" alt="image1" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="/images/2025-03-24-3D-visualization/image1.png" alt="image1" style="width: 100%; height: 300px; object-fit: cover;">
     <figcaption>위에서 아래 방향의 직사광을 추가한 경우</figcaption>
   </figure>
 </div>
@@ -66,7 +66,7 @@ excerpt: 내가 가진 기술을 활용해 회사 요구사항을 구현하며 �
 이때 사용하는 카메라는 Orthographic(직교) 카메라이며,  
 `shadow-camera-left/right/top/bottom`을 통해 이 카메라의 투영 범위를 설정할 수 있다.
 
-![](/images/2025-03-24-3D-simulation/image4.png)
+![](/images/2025-03-24-3D-visualization/image4.png)
 
 `shadow-camera-left/right/top/bottom`를 통해 이를 설정할 수 있는데,  
 이 값들이 너무 작으면, 아래 이미지처럼 건물이 커질 때 그림자가 일부 잘리는 현상이 발생할 수 있다.  
@@ -74,7 +74,7 @@ excerpt: 내가 가진 기술을 활용해 회사 요구사항을 구현하며 �
 50 정도의 범위로 설정했을 때 모든 건물 크기를 안정적으로 커버할 수 있었다.
 
 <figure style="text-align: center;">
-  <img src="/images/2025-03-24-3D-simulation/image3.png" alt="shadow issue" style="width: 100%; max-width: 600px;">
+  <img src="/images/2025-03-24-3D-visualization/image3.png" alt="shadow issue" style="width: 100%; max-width: 600px;">
   <figcaption>투영 범위가 좁을 때 발생하는 그림자 끊김 현상</figcaption>
 </figure>
 
@@ -121,7 +121,7 @@ function BuildingFloor({ coord, height, floorPosition }) {
 Shape로 그린 도형은 기본적으로 XY 평면에 생성되며, 높이를 설정하면 Z축 방향으로 입체화된다.  
 하지만 내가 원하는 방향은 XZ 평면에서 시작해 Y축 방향으로 높이가 쌓이는 구조이므로, 회전을 통해 이를 맞춰줘야 한다.
 
-![](/images/2025-03-24-3D-simulation/image5.png)
+![](/images/2025-03-24-3D-visualization/image5.png)
 
 ```tsx
 <mesh
@@ -215,7 +215,7 @@ useFrame(() => {
 });
 ```
 
-![](/images/2025-03-24-3D-simulation/image6.gif)
+![](/images/2025-03-24-3D-visualization/image6.gif)
 
 ### 2.4 좌표 변환
 
@@ -293,7 +293,7 @@ export const getRelativeCoords = (
 
 제일 고민한 부분은 슬라이더 UI로 건폐율을 조정하는 것인데, 요구사항이 이 건폐율에 따라 건축물 모델도 변경이 되어야한다는 것이다.
 
-![](/images/2025-03-24-3D-simulation/image7.png)
+![](/images/2025-03-24-3D-visualization/image7.png)
 
 연속적인 UI에 의해 **서버 요청을 여러 번 보내게 되는데** 이를 해결하기 위해 두 가지 방법을 사용했다.
 
@@ -415,7 +415,7 @@ useEffect(() => {
 
 구현 완료된 화면 모습은 다음과 같다.
 
-![](/images/2025-03-24-3D-simulation/image8.gif)
+![](/images/2025-03-24-3D-visualization/image8.gif)
 
 ## 4. 트러블 슈팅
 
@@ -557,7 +557,7 @@ useFrame(() => {
 });
 ```
 
-![](/images/2025-03-24-3D-simulation/image9.gif)
+![](/images/2025-03-24-3D-visualization/image9.gif)
 
 ## 6. 최적화
 
@@ -587,7 +587,7 @@ useEffect(() => {
 }, [extrudeGeo, edgesGeo, lineMat]);
 ```
 
-![](/images/2025-03-24-3D-simulation/image10.png)
+![](/images/2025-03-24-3D-visualization/image10.png)
 
 개발자 도구의 Performance 탭에서 Memory 체크박스를 선택한 뒤 녹화를 진행한 결과,  
 JS heap, Nodes, Listeners 그래프가 계단식으로 계속 증가하지 않고, 일정 시간마다 감소하는 모습을 확인할 수 있었다.
