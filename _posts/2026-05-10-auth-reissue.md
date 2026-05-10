@@ -2,7 +2,7 @@
 layout: single
 title: Cookie 기반 JWT 인증에서 reissue 다루기
 categories: Gradpath
-excerpt: jwt, auth, reissue
+excerpt: 401 응답에 대한 재요청 처리
 ---
 
 프로젝트에서 인증은 비교적 단순한 규칙을 따르고 있었습니다.
